@@ -1,0 +1,13 @@
+libraries:
+    - .       # Test from the local version
+    - https://github.com/openpipe-plugins/jinja
+
+start:
+    - insert:
+        - { name: João, age:  80 }
+        - { name: Bob, age: 40 }
+    - transform using jinja:
+        template: name.txt.jinja
+        single_item: True
+    - print:
+
