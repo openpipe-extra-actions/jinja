@@ -3,11 +3,22 @@ libraries:
     - https://github.com/openpipe-plugins/jinja
 
 start:
+
     - insert:
         - { name: João, age:  80 }
         - { name: Bob, age: 40 }
+    - copy to segment:
+        - single_item
+        - multi_item
+
+single_item:
     - transform using jinja:
         template: name.txt.jinja
         single_item: True
     - print:
 
+multi_item:
+    - transform using jinja:
+        template: multi_name.txt.jinja
+        single_item: False
+    - print:
