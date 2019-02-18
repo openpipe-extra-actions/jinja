@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 class Plugin(PluginRuntime):
 
-    def on_start(self, config):
+    def on_start(self, config, segment_resolver):
         env = Environment(
             loader=FileSystemLoader("."),
             autoescape=select_autoescape(['html', 'xml']),
