@@ -1,5 +1,5 @@
 """
-# Create content using Jinja2 templates
+Create content using a Jinja2 template
 """
 from openpipe.pipeline.engine import PluginRuntime
 from jinja2 import Environment, FileSystemLoader, select_autoescape
