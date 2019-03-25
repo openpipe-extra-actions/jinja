@@ -1,13 +1,13 @@
-libraries:
+_libraries:
     - .       # Test from the local version
     - https://github.com/openpipe-plugins/jinja
 
 start:
 
-    - insert:
+    - iterate:
         - { name: João, age:  80 }
         - { name: Bob, age: 40 }
-    - copy to segment:
+    - send to segment:
         - single_item
         - multi_item
 

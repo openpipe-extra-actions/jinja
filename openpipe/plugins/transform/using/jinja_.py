@@ -1,12 +1,18 @@
 """
-# jinja
+# Create content using Jinja2 templates
 """
-from openpipe.engine import PluginRuntime
+from openpipe.pipeline.engine import PluginRuntime
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
 
 class Plugin(PluginRuntime):
 
-    def on_start(self, config, segment_resolver):
+    required_config = """
+        template:       # Filename for a Jinja2 template
+        single_item:    # 
+        """
+
+    def on_start(self, config):
         env = Environment(
             loader=FileSystemLoader("."),
             autoescape=select_autoescape(['html', 'xml']),
@@ -21,6 +27,6 @@ class Plugin(PluginRuntime):
         else:
             self.item_list.append(item)
 
-    def on_complete(self):
+    def on_finish(self, reason):
         if self.item_list:
             self.put(self.template.render(items=self.item_list))
