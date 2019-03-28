@@ -1,6 +1,6 @@
 _libraries:
     - .       # Test from the local version
-    - https://github.com/openpipe-plugins/jinja
+    - https://github.com/openpipe-extra-actions/jinja
 
 start:
 

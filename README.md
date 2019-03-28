@@ -26,7 +26,7 @@ Requirements
 ## How to test
 
 ```bash
-openpipe run test.yaml
+openpipe test transform using/jinja
 ```
 
 ## How to use
