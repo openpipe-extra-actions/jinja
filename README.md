@@ -1,7 +1,7 @@
 Jinja
 =====
 
-This plugin provides integration with [Jinja], "[...] a full featured template engine for Python [...]" .
+This action library provides integration with [Jinja], "[...] a full featured template engine for Python [...]" .
 
 ---
 

@@ -1,11 +1,11 @@
 """
 Create content using a Jinja2 template
 """
-from openpipe.pipeline.engine import PluginRuntime
+from openpipe.pipeline.engine import ActionRuntime
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
-class Plugin(PluginRuntime):
+class Action(ActionRuntime):
 
     required_config = """
         template:       # Filename for a Jinja2 template
