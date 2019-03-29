@@ -9,7 +9,8 @@ class Action(ActionRuntime):
 
     required_config = """
         template:       # Filename for a Jinja2 template
-        single_item:    # 
+        single_item:    # If set to True produces the template a single item
+                        # when no more input data is available
         """
 
     def on_start(self, config):
