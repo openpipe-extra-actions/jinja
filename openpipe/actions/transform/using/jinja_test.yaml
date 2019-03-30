@@ -24,5 +24,5 @@ multi_item:
         template: |
             {% for item in items %}
             My Name is {{ item.name }}, age is {{ item.age }}
-            {% endfor %}""
+            {% endfor %}
     - print:
