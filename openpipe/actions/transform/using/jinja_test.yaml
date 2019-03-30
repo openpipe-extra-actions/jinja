@@ -12,12 +12,17 @@ start:
 
 single_item:
     - transform using jinja:
-        template: name.txt.jinja
         single_item: True
+        template_type: text
+        template: Name is {{ name }}, age is {{ age }}
     - print:
 
 multi_item:
     - transform using jinja:
-        template: multi_name.txt.jinja
         single_item: False
+        template_type: text
+        template: |
+            {% for item in items %}
+            My Name is {{ item.name }}, age is {{ item.age }}
+            {% endfor %}""
     - print:
