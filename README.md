@@ -27,7 +27,7 @@ Requirements
 
 ```bash
 openpipe install-action-lib jinja
-openpipe test transform using jinja
+openpipe test transform from jinja
 ```
 
 ## How to use

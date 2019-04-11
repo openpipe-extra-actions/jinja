@@ -11,14 +11,14 @@ start:
         - multi_item
 
 single_item:
-    - transform using jinja:
+    - transform from jinja:
         single_item: True
         template_type: text
         template: Name is {{ name }}, age is {{ age }}
     - print:
 
 multi_item:
-    - transform using jinja:
+    - transform from jinja:
         single_item: False
         template_type: text
         template: |
